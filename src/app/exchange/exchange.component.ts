@@ -18,6 +18,7 @@ export class ExchangeComponent {
 
     fetchGecko().then(
       string => {
+				console.log(string)
         this.exchange = string.tickers
       })
   }

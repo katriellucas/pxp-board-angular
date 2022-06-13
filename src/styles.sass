@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+html 
+	box-sizing: border-box 
+	font-size: 16px 
+
+*, *:before, *:after 
+	box-sizing: inherit
+
+body
+	background: #0f172a
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul 
+	margin: 0 
+	padding: 0 
+	font-weight: normal
+
+ol, ul 
+	list-style: none 
+
+img 
+	max-width: 100% 
+	height: auto
+
+main
+	margin-bottom: 32px
+	padding: 0 16px
+	flex: 1
+
+	@media (min-width: 600px)
+		padding: 0 32px
+
+	@media (min-width: 840px)
+		padding: 0 64px
+
+	@media (min-width: 1080px)
+		padding: 0 96px
+
+.card-grid
+	display: grid
+	gap: 8px
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+	margin-bottom: 32px
+
+	@media (min-width: 600px)
+		gap: 16px

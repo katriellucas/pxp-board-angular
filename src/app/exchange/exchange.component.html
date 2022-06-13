@@ -1,7 +1,17 @@
-<div *ngFor="let item of exchange" class="red">
-	<div>{{item.market.name}}<div>
-	<div class="white">Price: {{fnPrice(item.converted_last.usd)}}<div>
-	<span>Volume: {{fnVolume(item.converted_volume.usd)}}</span>
-	<app-withdrawal-info name="{{item.market.name}}"></app-withdrawal-info>
-	<br/>
+<div *ngFor="let item of exchange" class="card">
+	<div class="card__head">
+		<img class="card__image" src="{{item.market.logo}}"/>
+		<div class="card__title">{{item.market.name}}</div>
+		</div>
+	<div class="card__body">
+		<div class="card__label">
+			<span>Price: </span>
+			<span>{{fnPrice(item.converted_last.usd)}}</span>
+		</div>
+		<div class="card__label">
+			<span>Volume: </span>
+			<span>{{fnVolume(item.converted_volume.usd)}}</span>
+		</div>
+		<app-withdrawal-info name="{{item.market.name}}"></app-withdrawal-info>
+	</div>
 </div>
