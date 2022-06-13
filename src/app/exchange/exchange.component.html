@@ -1,0 +1,7 @@
+<div *ngFor="let item of exchange" class="red">
+	<div>{{item.market.name}}<div>
+	<div class="white">Price: {{fnPrice(item.converted_last.usd)}}<div>
+	<span>Volume: {{fnVolume(item.converted_volume.usd)}}</span>
+	<app-withdrawal-info name="{{item.market.name}}"></app-withdrawal-info>
+	<br/>
+</div>
